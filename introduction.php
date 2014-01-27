@@ -25,7 +25,7 @@
                 </div>
        <footer id="page_footer">
                     <div>
-                      <p>Last Updated: 1/16/2014</p> 
+                      <p>Last Updated: 1/24/2014</p> 
 					  <p>&copy; 2014, Ryan Schumann, All rights Reserved</p>
                         </div>
         </footer>

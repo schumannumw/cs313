@@ -18,14 +18,14 @@
 		  <p>                   
                     <img src="1.jpg" alt="1" class="large-images"/>
 					<img src="2.jpg" alt="1" class="large-images"/>
-                    <img src="hw.jpg" alt="1" class="large-images"/>
+                    <a href="questions.php" title="Questions"><img src="3.jpg" alt="3" class="large-images"/></a>
 					<img src="hw.jpg" alt="1" class="large-images"/>
                     <img src="hw.jpg" alt="1" class="large-images"/>
 					<img src="hw.jpg" alt="1" class="large-images"/>
                  </p>
        <footer id="page_footer">
                     <div>
-                      <p>Last Updated: 1/16/2014</p> 
+                      <p>Last Updated: 1/24/2014</p> 
 					  <p>&copy; 2014, Ryan Schumann, All rights Reserved</p>
                         </div>
         </footer>
