@@ -2,9 +2,8 @@
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
-		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen" />
     </head>
-	
     <body>
 		<div id="press">
 			<?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/header.php'; ?>
@@ -14,11 +13,14 @@
 			<?php include $_SERVER['DOCUMENT_ROOT'] . '/modules/navigation.php'; ?>
         </div>
 		
-		<div id="content">
-			<h2>Welcome to my home page</h2>
-			<p>News Feeds: My Latest Assignment</p>
-			 <a href="assignments/questions.php" title="Questions"><img src="assignments/3.jpg" alt="3" class="large-images"/></a>
-		</div>
+		  <p>                   
+				<img src="1.jpg" alt="1" class="large-images"/>
+				<img src="2.jpg" alt="1" class="large-images"/>
+				<a href="questions.php" title="Questions"><img src="3.jpg" alt="3" class="large-images"/></a>
+				<img src="hw.jpg" alt="1" class="large-images"/>
+				<img src="hw.jpg" alt="1" class="large-images"/>
+				<img src="hw.jpg" alt="1" class="large-images"/>
+           </p>
 <br/><br/><br/>
        <footer id="page_footer">
 			<div>

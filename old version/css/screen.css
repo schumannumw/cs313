@@ -1,0 +1,111 @@
+/* 
+    Document   : hscreen
+    Created on : January, 2014, 10:10:25 AM
+    Author     : Ryan Schumann
+   Description:
+        Style all screen user agents
+
+ ++++ CSS Selectors +++++
+Class selector = .name - use in a web page multiple times
+ID selector = #name - use in a web once only per page
+Element selector = p or body or header
+Attribute selector = img[src="logo.jpg"]
+Pseudo-class selector = a:hover or body p:nth-child[1]
+Context selector = body div p a
+*/
+
+h1 {
+    font-family: sans-serif;
+    font-size: 40px
+}
+h2 {
+	color: white;
+}
+h3 {
+	color: white;
+}
+h4 {
+	color: white;
+}
+body{
+ font-family: arial, helvetica, 'times new roman', sans-serif;
+ font-size: 16px;
+background-color:#000000;
+margin: 0;
+padding: 0;
+color: white;
+}
+
+#page_section{
+ width: 86.7724867%;
+ margin: 0 auto 0 auto;
+}
+
+/*This is for my navigational menu*/
+
+#press {
+float:right;
+margin-right:25%;
+}
+}
+
+#main_nav {
+        overflow: hidden;
+		 
+}
+#main_nav li {
+    list-style-type: none;}
+
+#main_nav li a {
+	display: table;
+	padding: 5px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	 }
+#main_nav li a:hover {
+	padding: 5px 18px;
+    color: #FFFFFF;
+	background-color: #000000; }
+/*This is for the page content*/
+#page_content{
+ overflow: hidden;
+}
+
+#content{
+padding-left: 70px ;
+color: white;
+ position: relative;
+ overflow: hidden;
+ width: 55%;
+}
+
+.large-images  {
+	padding: 5px;
+	margin: 10px;
+	width: 300px;
+	border: 1px solid #778899;
+	-moz-box-shadow: 0 0 10px #778899;
+	-webkit-box-shadow: 0 0 10px #778899;
+	box-shadow: 0 0 10px #778899;
+}
+
+#page_footer{
+overflow: hidden;
+background-color: #FFF;
+position:fixed;
+bottom: 0px;
+width: 100%;
+text-align: center;
+font-size: 10px;
+color: black;
+}
+
+figure img{
+ max-width: 50%;
+ min-width: 10%;
+}
+
+.links {
+  font-size: 90%;
+} 
