@@ -17,7 +17,7 @@
 				<img src="1.jpg" alt="1" class="large-images"/>
 				<img src="2.jpg" alt="1" class="large-images"/>
 				<a href="questions.php" title="Questions"><img src="3.jpg" alt="3" class="large-images"/></a>
-				<img src="hw.jpg" alt="1" class="large-images"/>
+				<a href="../coloring/index.php" title="Site"><img src="../assignments/4.jpg" alt="3" class="large-images"/></a>
 				<img src="hw.jpg" alt="1" class="large-images"/>
 				<img src="hw.jpg" alt="1" class="large-images"/>
            </p>

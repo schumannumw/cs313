@@ -1,3 +1,8 @@
+<?php
+session_start();
+require "../config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -16,7 +21,12 @@
 			</div>
 
 			<div id="content">
-			<h2>About my site || Coming soon</h2>
+			<h2>About my site:</h2>
+			<p>A special thanks to these sources for their helpful tutorials:</p>
+			<p><a href="http://www.thetechgame.com/Tutorials/id=7104/php-how-to-create-a-simple-registration-login-script.html">thetechgame.com</a></p>
+			<p><a href="http://www.htmlgoodies.com/beyond/php/article.php/3877766/Web-Developer-How-To-Upload-Images-Using-PHP.htm">htmlgoodies.com</a></p>
+			<p><a href="http://ec2-54-208-212-218.compute-1.amazonaws.com/">My website</a></p>
+			<p>By learning from these tutorials and the help of w3schools.com I was able to create this site.</p>
 			</div>
 
 		<footer>

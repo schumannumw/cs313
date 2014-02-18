@@ -1,8 +1,6 @@
 <?php
 session_start();
-require "config.php";
 ?>
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -21,12 +19,15 @@ require "config.php";
 			</div>
 
 			<div id="content">
-			<h2>Welcome to coloring pages</h2>
-<p>Top coloring pages this week </p>
-<img src="/coloring/images/home/1.jpg" alt="" class="large-images">
-<img src="/coloring/images/home/2.jpg" alt="" class="large-images">
-<img src="/coloring/images/home/3.jpg" alt="" class="large-images">
-<img src="/coloring/images/home/4.jpg" alt="" class="large-images">
+			<h2>Registration Successful</h2>
+<?php //is user logged in. 
+if(isset($_SESSION['username'])){ 
+   echo "<h1>Welcome ".$_SESSION['username']."</h1>you are logged in. <br /> This is the after login page! <a href='login/logout.php'>Click Here </a>to log out."; 
+} 
+else{ 
+   echo "<a href='index.php'>Log In</a>"; 
+} 
+?>
 			</div>
 
 		<footer>

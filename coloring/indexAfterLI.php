@@ -1,6 +1,8 @@
 <?php
 session_start();
+require "config.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -20,12 +22,16 @@ session_start();
 
 			<div id="content">
 			<h2>Welcome to coloring pages</h2>
-			<h1>Welcome: you are now logged in</h1>
-			<h1>Click here to log out:</h1> <a href="login/logout.php"> LOG OUT </a>
-			<p>Top coloring pages this week<p/>
-<img src="/coloring/images/animals_1.jpg" alt="" class="large-images">
-<img src="/coloring/images/disney_1.jpg" alt="" class="large-images">
-<img src="/coloring/images/easter_1.jpg" alt="" class="large-images">
+ <?php //is user logged in. 
+if(isset($_SESSION['username'])){ 
+   echo "<h1>Welcome ".$_SESSION['username']."</h1>you are logged in. <br /> This is the after login page! <a href='login/logout.php'>Click Here </a>to log out."; 
+} 
+else{ 
+   echo "<a href='index.php'>Log In</a>"; 
+} 
+?>
+
+
 		<footer>
 			<div>
 			<?php include $_SERVER['DOCUMENT_ROOT'] . '/coloring/modules/footer.php'; ?>

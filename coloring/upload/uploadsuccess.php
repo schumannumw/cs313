@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "config.php";
+require "../config.php";
 ?>
 
 <!DOCTYPE html>
@@ -22,11 +22,8 @@ require "config.php";
 
 			<div id="content">
 			<h2>Welcome to coloring pages</h2>
-<p>Top coloring pages this week </p>
-<img src="/coloring/images/home/1.jpg" alt="" class="large-images">
-<img src="/coloring/images/home/2.jpg" alt="" class="large-images">
-<img src="/coloring/images/home/3.jpg" alt="" class="large-images">
-<img src="/coloring/images/home/4.jpg" alt="" class="large-images">
+			<h1>File upload</h1>
+			<p>Your file was uploaded successful</p>
 			</div>
 
 		<footer>

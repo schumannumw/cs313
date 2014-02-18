@@ -1,40 +1,33 @@
 <?php
-
-ob_start();
-$host="localhost"; // Host 
-$username="color"; // Database username 
-$password="c"; // Mysql password 
-$db_name="coloringpages_db"; // Database name 
-$tbl_name="users"; // Table name that I want to check
-
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
-
-// This is sent from the form 
-$myusername=$_POST['myusername']; 
-$mypassword=$_POST['mypassword']; 
-
-// Some protect
-$myusername = stripslashes($myusername);
-$mypassword = stripslashes($mypassword);
-$myusername = mysql_real_escape_string($myusername);
-$mypassword = mysql_real_escape_string($mypassword);
-$sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
-$result=mysql_query($sql);
-
-// Mysql_num_row is counting table row
-$count=mysql_num_rows($result);
-
-// If result matched $myusername and $mypassword, table row must be 1 row
-if($count==1){
-
-// Register $myusername, $mypassword and redirect to my file"
-session_register("myusername");
-session_register("mypassword"); 
-header("location:../indexAfterLI.php");
-}
-else {
-echo "Wrong Username or Password";
-}
-ob_end_flush();
+require "../config.php"; 
+//Check to see if the user is logged in. 
+if(isset($_POST['submit'])) 
+{ 
+   //Variables from the table 
+   $user  = $_POST['user']; 
+   $pass  = $_POST['pass']; 
+       
+   //Check to see if the user left any space empty! 
+   if($user == "" || $pass == "") 
+   { 
+      echo "Please fill in all the information!"; 
+   } 
+    
+   //Check to see if the username AND password MATCHES the username AND password in the DB
+   else 
+   { 
+      $query = mysqli_query($con,"SELECT * FROM users WHERE username = '$user' and password = '$pass'") or die("Can not query DB."); 
+      $count = mysqli_num_rows($query); 
+       
+      if($count == 1){ 
+         //YES WE FOUND A MATCH! 
+         $_SESSION['username'] = $user; //Create a session for the user! 
+         header ("location: ../indexAfterLI.php"); 
+      } 
+       
+      else{ 
+         echo "Username and Password DO NOT MATCH! TRY AGAIN!"; 
+      } 
+   } 
+} 
 ?>
