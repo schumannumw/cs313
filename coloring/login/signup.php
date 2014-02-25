@@ -6,52 +6,6 @@ require "../config.php"; // My login Credentials
 if(isset($_SESSION['username'])){ 
    header("location: ../indexAfterLI.php"); 
 } 
-
-//Did user press submit?
-if(isset($_POST['submit']))
-{
-// Form info
-$user = $_POST['newuser'];
-$pass = $_POST['newpass'];
-$rpass = $_POST['rnewpass'];
-$email = $_POST['email'];
-
-// In the future do injections
-// echo "$user";
-// echo "$pass";
-// echo "$email";
-// Are they all there?
-	if($user == "" || $pass=="" || $rpass=="" || $email=="")
-	{
-		echo "Please complete the registration form.";
-	}
-	
-	else{
-	//Do passwords match?
-	if($pass != $rpass)
-	{
-	echo "Please re-enter your passwords";
-	}
-	
-	// Does someone have your username?
-	else{
-	$query = mysqli_query($con, "SELECT * FROM users WHERE username = '$user'") or die("Can not query table.");
-	//count rows
-	$row = mysqli_num_rows($query);
-	if($row == 1)
-	{
-		echo "Your chosen username is currently in use by another user, please create a different username";
-	}
-	//send to db
-	else
-	{
-	$add = mysqli_query($con,"INSERT INTO users (username, password ,email) VALUES ('$user' , '$pass' , '$email') ") or die("Can't insert new data. ");
-	echo "Submission successful: <a href='login.php'>Click here</a> to log in.."; 
-	}
-	
-	}
-	}
-}
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +26,57 @@ $email = $_POST['email'];
 			</div>
 
 			<div id="content">
-			<h2>Welcome to coloring pages</h2>
+			
+<?php		
+//Did user press submit?
+if(isset($_POST['submit']))
+{
+// Form info
+$user = $_POST['newuser'];
+$password = $_POST['newpass'];
+$rpass = $_POST['rnewpass'];
+//$rpass = $_POST['rnewpass'];
+$email = $_POST['email'];
+
+// In the future do injections
+// echo "$user";
+// echo "$pass";
+// echo "$email";
+// Are they all there?
+	if($user == "" || $password=="" || $rpass=="" || $email=="")
+	{
+		echo "Please complete the registration form.";
+	}
+	
+	else{
+	//Do passwords match?
+	if($password != $rpass)
+	{
+	echo "Please re-enter your passwords";
+	}
+	
+	// Does someone have your username?
+	else{
+	$pass = hash("sha256", $password);
+	$query = mysqli_query($con, "SELECT * FROM users WHERE username = '$user'") or die("Can not query table.");
+	//count rows
+	$row = mysqli_num_rows($query);
+	if($row == 1)
+	{
+		echo "Your chosen username is currently in use by another user, please create a different username";
+	}
+	//send to db
+	else
+	{
+	$add = mysqli_query($con,"INSERT INTO users (username, password ,email) VALUES ('$user' , '$pass' , '$email') ") or die("Can't insert new data. ");
+	header("location: /coloring/login/signupLogin.php");
+	// echo "Submission successful: <a href='login.php'>Click here</a> to log in.."; 
+	}
+	
+	}
+	}
+}
+?>
 			<h1>Create a new User:</h1>
 			<form name="register" method="post" action="/coloring/login/signup.php">
 <input name="newuser" type="text" id="newuser">Username <br>

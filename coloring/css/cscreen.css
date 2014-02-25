@@ -21,8 +21,14 @@ html {
 
 body {
 	margin: 0 0 100px; /* bottom = footer height */
-	padding-left: 30px;
+	padding-left: 100px;
 	padding-right: 30px;
+	/*background-color: aliceblue;*/
+	background-color: #fff; 
+background-image: 
+linear-gradient(90deg, transparent 79px,  #C65F58 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
 }
 footer {
 	position: absolute;
@@ -43,6 +49,9 @@ overflow:hidden;
 
 #main_nav li
 {
+border-right: solid;
+border-color: white;
+border-width: 2px;
 float:left;
 }
 
@@ -77,9 +86,50 @@ color: blue;
 {
 color: purple;
 }
+ 
+ /*This is for the header*/
+
+#press ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+}
+
+#press li
+{
+border: solid;
+border-color: white;
+border-width: 2px;
+float:left;
+}
+
+#press a:visited{
+color: #FFFFFF;
+}
+#press a:link
+{
+display:block;
+width:100px;
+font-weight:lighter;
+color:#FFFFFF;
+background-color:#008080;
+text-align:center;
+padding:2px;
+text-decoration:none;
+text-transform:uppercase;
+}
+
+#press a:hover,a:active
+{
+background-color:#54cdf1;
+text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
 
 /* This section is for images */
 .large-images  {
+	background-color: white;
 	padding: 5px;
 	margin: 10px;
 	width: 300px;

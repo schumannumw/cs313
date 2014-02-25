@@ -40,6 +40,7 @@ if(isset($_POST['submit']))
 } 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -58,17 +59,14 @@ if(isset($_POST['submit']))
 			</div>
 
 			<div id="content">
-			<h2>Welcome to coloring pages</h2>
+			<h1>Registration Successful</h1>
 			<h1>Login:</h1>
-			<form name="register" method="post" action="login.php">
+			<form name="register" method="post" action="signupLogin.php">
 <input name="user" type="text" id="user">Username <br>
 <input name="pass" type="password" id="pass">Password<br>
-<input type="submit" name="submit" value="Login"><br><br>
+<input type="submit" name="submit" value="Login"><br>
 </form>
-<a href="/coloring/login/signup.php">Create an account</a>
 			</div>
-
-
 		<footer>
 			<div>
 			<?php include $_SERVER['DOCUMENT_ROOT'] . '/coloring/modules/footer.php'; ?>

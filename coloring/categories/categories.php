@@ -23,7 +23,6 @@ require "../config.php";
 			<h2>Please select a category from below</h2>
 			</div>
 		
-		   <h2>Category</h2>
 	<form action="categories.php" method="post">
      <?php
 
@@ -58,13 +57,14 @@ require "../config.php";
      ?>
        <input type="submit" value="Search"/>
      </form>
-	 Category:
+	<div id="<middleText">
+	Category:
 
 <?php 
 	$value = $_POST["categories"];
     echo $value;
 ?>
-	 			<p>You are now viewing All Pages<p/>
+</div>
 
 		<?php
 		// Get images from a directory
@@ -77,9 +77,14 @@ require "../config.php";
 		?>
 		
 		<?php
+	
+		
 		//1
 		if ($value == 1){
+		echo '<div id="<middleText">';
 		echo "Easter";
+		echo '</div>';
+		// echo $afterText
 		for($index=0; $index < $indexCount; $index++) {
 			$extension = substr($dirArray[$index], -3);
 			if ($extension == 'jpg'){ // I think by doing a * I can get everything in the folder
@@ -91,7 +96,9 @@ require "../config.php";
 		
 		//2
 		if ($value == 2){
+		echo '<div id="<middleText">';
 		echo "Christmas";
+		echo '</div>';
 		for($index=0; $index < $indexCount; $index++) {
 			$extension = substr($dirArray[$index], -3);
 			if ($extension == 'jpg'){ // I think by doing a * I can get everything in the folder
@@ -102,7 +109,9 @@ require "../config.php";
 		}
 		//3
 		if ($value == 3){
+		echo '<div id="<middleText">';
 		echo "Thanksgiving";
+		echo '</div>';
 		for($index=0; $index < $indexCount; $index++) {
 			$extension = substr($dirArray[$index], -3);
 			if ($extension == 'jpg'){ // I think by doing a * I can get everything in the folder
@@ -113,7 +122,9 @@ require "../config.php";
 		}
 		//4
 		if ($value == 4){
-		echo "Easter";
+		echo '<div id="<middleText">';
+		echo "Animals";
+		echo '</div>';
 		for($index=0; $index < $indexCount; $index++) {
 			$extension = substr($dirArray[$index], -3);
 			if ($extension == 'jpg'){ // I think by doing a * I can get everything in the folder
@@ -124,7 +135,9 @@ require "../config.php";
 		}
 		//5
 		if ($value == 5){
+		echo '<div id="<middleText">';
 		echo "Disney";
+		echo '</div>';
 		for($index=0; $index < $indexCount; $index++) {
 			$extension = substr($dirArray[$index], -3);
 			if ($extension == 'jpg'){ // I think by doing a * I can get everything in the folder
@@ -135,7 +148,9 @@ require "../config.php";
 		}
 		//6
 		if ($value == 6){
+		echo '<div id="<middleText">';
 		echo "Around The House";
+		echo '</div>';
 		for($index=0; $index < $indexCount; $index++) {
 			$extension = substr($dirArray[$index], -3);
 			if ($extension == 'jpg'){ // I think by doing a * I can get everything in the folder
@@ -145,9 +160,11 @@ require "../config.php";
 			}
 		}
 		
-				//7 upload
+				//7 Other
 		if ($value == 7){
-		echo "Upload";
+		echo '<div id="<middleText">';
+		echo "Other";
+		echo '</div>';
 		for($index=0; $index < $indexCount; $index++) {
 			$extension = substr($dirArray[$index], -3);
 			if ($extension == 'jpg'){ // I think by doing a * I can get everything in the folder
@@ -157,7 +174,13 @@ require "../config.php";
 			}
 		}
 		?>
-
+<h3>Printing Instructions:</h3>
+<ol>
+  <li>Right click on the image</li>
+  <li>Click: Save image as</li>
+  <li>Save to desktop</li>
+  <li>Print</li>
+</ol>
 		<footer>
 			<div>
 			<?php include $_SERVER['DOCUMENT_ROOT'] . '/coloring/modules/footer.php'; ?>
