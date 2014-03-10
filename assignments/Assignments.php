@@ -18,6 +18,10 @@
 				<img src="2.jpg" alt="1" class="large-images"/>
 				<a href="questions.php" title="Questions"><img src="3.jpg" alt="3" class="large-images"/></a>
 				<a href="../coloring/index.php" title="Site"><img src="../assignments/4.jpg" alt="3" class="large-images"/></a>
+				
+				<a href="http://ec2-54-208-212-218.compute-1.amazonaws.com:8080/helloWorld/hellowServlet" title="Site"><img src="../assignments/servlet.jpg" alt="3" class="large-images"/></a>
+			 	 <a href="../coloring/index.php" title="Site"><img src="../assignments/finalcoloring.jpg" alt="3" class="large-images"/></a>
+				 
 				<img src="hw.jpg" alt="1" class="large-images"/>
 				<img src="hw.jpg" alt="1" class="large-images"/>
            </p>

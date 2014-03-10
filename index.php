@@ -17,7 +17,8 @@
 		<div id="content">
 			<h2>Welcome to my home page</h2>
 			<p>News Feeds: My Latest Assignment</p>
-			 <a href="coloring/index.php" title="Site"><img src="assignments/4.jpg" alt="3" class="large-images"/></a>
+			 <a href="http://ec2-54-208-212-218.compute-1.amazonaws.com:8080/helloWorld/hellowServlet" title="Site"><img src="assignments/servlet.jpg" alt="3" class="large-images"/></a>
+			 	 <a href="coloring/index.php" title="Site"><img src="assignments/finalcoloring.jpg" alt="3" class="large-images"/></a>
 		</div>
 <br/><br/><br/>
        <footer id="page_footer">
